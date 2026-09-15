@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplace &mdash; Heritage &amp; Collectibles Society, CET</title>
+<link rel="icon" type="image/png" href="light logo.png">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function() {
+    try {
+      const v = localStorage.getItem('hcs:theme');
+      const isDark = v === 'dark' || (!v && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" data-src-light="light logo.png" data-src-dark="dark logo.png" src="light logo.png" alt="HCS Seal">
+      <span class="brand-text">
+        <span class="b1">H&amp;C Society</span>
+        <span class="b2">CET &middot; Est. 2026</span>
+      </span>
+    </a>
+    <button id="navBurger" aria-label="Toggle menu">&#9776;</button>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="heritage.html">Heritage of CET</a>
+      <a href="execom.html">Execom</a>
+      <a href="subpanels.html">Sub-Panels</a>
+      <a href="events.html">Events</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="marketplace.html">Marketplace</a>
+    </nav>
+    <div class="nav-right">
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9789;</button>
+      <button id="navBurger" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="eyebrow">Section VI</div>
+  <h1 class="page-title">Student Marketplace</h1>
+  <p class="page-sub">Browse by category. Each tile links out to its listing board, form or auction page.</p>
+</div>
+<section>
+  <div class="grid" style="--min:250px;" id="marketGrid"></div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <div class="footer-brand">Heritage &amp; Collectibles Society</div>
+      <div class="footer-tag">Preserving the Past, Inspiring the Future</div>
+    </div>
+    <div class="footer-meta">
+      College of Engineering Trivandrum &middot; Est. 2026<br>
+      Faculty-coordinated student chapter
+    </div>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
